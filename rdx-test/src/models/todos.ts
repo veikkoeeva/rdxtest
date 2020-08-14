@@ -1,5 +1,6 @@
 import { createModel, RoutingState } from '@captaincodeman/rdx-model';
 import { Store } from '../store.js';
+import engine from '../engine.js';
 
 export interface Todo {
   userId: number;
@@ -63,6 +64,7 @@ export default createModel({
         // dispatch should be augmented with other models methods
         // dispatch.todos.request()
         dispatch.todos.request();
+        console.log('saving');
         const resp = await fetch(`${endpoint}todos/${payload}`);
         const todo: Todo = await resp.json();
         dispatch.todos.received(todo);
@@ -71,13 +73,18 @@ export default createModel({
 
     async load() {
       const dispatch = store.dispatch();
-      const state = store.getState();
-      if (!state.todos.ids.length) {
-        dispatch.todos.request();
-        const resp = await fetch(`${endpoint}todos`);
-        const todos: Todo[] = await resp.json();
-        dispatch.todos.receivedList(todos);
-      }
+      //const state = store.getState();
+      //if (!state.todos.ids.length) {
+      dispatch.todos.request();
+
+      /*const resp = await fetch(`${endpoint}todos`);
+        const todos: Todo[] = await resp.json();*/
+
+      const todos: Array<Todo> = engine.getTodos();
+      todos.forEach(value => console.log(value));
+
+      dispatch.todos.receivedList(todos);
+      //}
     },
 
     'routing/change': async function (payload: RoutingState) {
