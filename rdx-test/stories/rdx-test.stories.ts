@@ -1,11 +1,8 @@
 import { html } from 'lit-html';
-import '../src/rdx-test.js';
+import '../src/index.js';
 
 export default {
-  title: 'rdx-test',
+  title: 'Rdx store test',
 };
 
-export const App = () =>
-  html`
-    <rdx-test></rdx-test>
-  `;
+export const App = () => html` <app-shell></app-shell> `;

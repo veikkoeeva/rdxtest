@@ -6,23 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="Description" content="Put your description here.">
   <base href="/">
-
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background-color: #ededed;
-    }
-  </style>
-  <title>rdx-test</title>
+ 
+   <style>body{font-family:Roboto,Noto,sans-serif;line-height:1.5;padding:12px}header{margin:8px;padding:8px;line-height:48px}a{height:48px;margin:4px;padding:10px;background-color:#eee}app-shell{display:block;margin:8px;padding:12px;border:1px solid #ccc;border-radius:6px;white-space:pre}img{max-width:100%;height:auto}</style>
+  <title>Open-wc and Rdx</title>
 </head>
 
 <body>
-  <rdx-test></rdx-test>
+  <h1>An open-wc and Rdx sample</h1>  
+  <header>
+    <a href="./">home</a>    
+    <a href="todos">todos</a>    
+    <a href="counter">counter</a>
+    <a href="unknown">unknown</a>
+  </header>
+  <app-shell></app-shell>
 
-  <script type="module" src="./out-tsc/src/rdx-test.js"></script>
+  <script type="module" src="./out-tsc/src/index.js"></script>
 </body>
 
 </html>
