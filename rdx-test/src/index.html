@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="Description" content="Put your description here.">
-  <base href="/">
- 
-   <style>body{font-family:Roboto,Noto,sans-serif;line-height:1.5;padding:12px}header{margin:8px;padding:8px;line-height:48px}a{height:48px;margin:4px;padding:10px;background-color:#eee}app-shell{display:block;margin:8px;padding:12px;border:1px solid #ccc;border-radius:6px;white-space:pre}img{max-width:100%;height:auto}</style>
+  <link rel="manifest" href="manifest.json">
+  <base href=".">
+  <style>body{font-family:Roboto,Noto,sans-serif;line-height:1.5;padding:12px}header{margin:8px;padding:8px;line-height:48px}a{height:48px;margin:4px;padding:10px;background-color:#eee}app-shell{display:block;margin:8px;padding:12px;border:1px solid #ccc;border-radius:6px;white-space:pre}img{max-width:100%;height:auto}</style>
   <title>Open-wc and Rdx</title>
 </head>
 
@@ -21,7 +21,8 @@
   </header>
   <app-shell></app-shell>
 
-  <script type="module" src="./out-tsc/src/index.js"></script>
+  <script type="module" src="sw-loader.js"></script>
+  <script type="module" src="../out-tsc/src/index.js"></script>
 </body>
 
 </html>

@@ -4,14 +4,14 @@ const endpoint = 'https://jsonplaceholder.typicode.com/';
 class Engine {
   private static instance?: Engine;
 
-  private todos: Array<Todo>;
+  private todos: Array<Todo> = new Array<Todo>();
 
   public getTodos(): Array<Todo> {
     return this.todos;
   }
 
   private constructor() {
-    todos = new Array<Todo>();
+    console.log('temporary constructor call, will be removed');
   }
 
   static getInstance(): Engine {

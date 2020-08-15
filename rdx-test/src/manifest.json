@@ -1,0 +1,14 @@
+{
+    "name": "Rdx demo",
+    "short_name": "Rdx demo",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#ffffff",
+    "background_color":"#ffffff",
+    "icons": [
+      {
+        "src": "openwclogo.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }]
+  }
