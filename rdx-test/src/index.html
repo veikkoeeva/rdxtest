@@ -19,10 +19,16 @@
     <a href="counter">counter</a>
     <a href="unknown">unknown</a>
   </header>
-  <app-shell></app-shell>
+  <!-- <app-shell></app-shell> -->
+  <rdx-home></rdx-home>
+  
+  <script type="module">
+    import workboxLoader from "./sw-loader.js";
+    workboxLoader();    
+  </script>
 
-  <script type="module" src="sw-loader.js"></script>
-  <script type="module" src="../out-tsc/src/index.js"></script>
+  <!-- <script type="module" src="../out-tsc/src/index1.js"></script> -->
+  <script type="module" src="../out-tsc/src/index2.js"></script>
 </body>
 
 </html>

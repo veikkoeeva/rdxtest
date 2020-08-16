@@ -2,7 +2,7 @@ import { connect } from '@captaincodeman/rdx';
 import { store, State } from '../store.js';
 import { Todo } from '../models/todos.js';
 
-class TodoListElement extends connect(store, HTMLElement) {
+export default class TodoListElement extends connect(store, HTMLElement) {
   set todos(val: Todo[]) {
     if (this.el && val.length) {
       const frag = document.createDocumentFragment();

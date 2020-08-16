@@ -1,10 +1,8 @@
-//import { Workbox } from "workbox-window/Workbox.mjs";
-
-async function workboxLoader()
+export default async function workboxLoader()
 {
     if("serviceWorker" in navigator)
     {
-        const { Workbox } = import("workbox-window/Workbox.mjs");
+        const { Workbox } = await import("workbox-window/Workbox.mjs");
         const wb = new Workbox("sw.js");
         wb.addEventListener("message", (event) =>
         {
@@ -18,3 +16,5 @@ async function workboxLoader()
         wb.register();
     }
 }
+
+//export default (async () => { try { await workboxLoader() } catch(err) { console.error('Horrors of errors...')  } })();

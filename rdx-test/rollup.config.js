@@ -22,7 +22,7 @@ const baseConfig = createBasicConfig({
   // option to generate an additional build just for this browser
   // legacyBuild: true,
   // development mode creates a non-minified build for debugging or development
-  developmentMode: process.env.ROLLUP_WATCH === 'true',
+  developmentMode: process.env.ROLLUP_WATCH === "true",
   // set to true to inject the service worker registration into your index.html
   injectServiceWorker: false,
   workbox: false
@@ -35,8 +35,9 @@ export default [
     format: 'es',
     dir: outputDir
   },
-  plugins: [    
+  plugins: [
     resolve({ browser: true }),
+    replace({ 'process.env.NODE_ENV': '"production"' }),
     terser({ output: { comments: false } })
   ]},
   merge(baseConfig,
