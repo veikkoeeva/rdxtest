@@ -77,10 +77,10 @@ export default createModel({
       //if (!state.todos.ids.length) {
       dispatch.todos.request();
 
-      /*const resp = await fetch(`${endpoint}todos`);
-        const todos: Todo[] = await resp.json();*/
+      const resp = await fetch(`${endpoint}todos`);
+      const todos: Todo[] = await resp.json();
 
-      const todos: Array<Todo> = engine.getTodos();
+      //const todos: Array<Todo> = engine.getTodos();
       todos.forEach(value => console.log(value));
 
       dispatch.todos.receivedList(todos);

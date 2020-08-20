@@ -1,5 +1,12 @@
-import './ui2/rdx-counter.js';
+//import { LitElement, html, css } from 'lit-element';
+
 import './ui2/rdx-home.js';
-import './ui2/rdx-todoItem.js';
-import './ui2/rdx-todos.js';
-import './router.js';
+
+/*
+window.addEventListener('beforeunload', event => {
+  console.log(
+    'Trying to unload (browser refresh?). Now allowed now without a conditional.'
+  );
+  event.preventDefault();
+  event.returnValue = '';
+});*/
